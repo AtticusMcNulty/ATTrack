@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/*"
+to = "/score_board.html"
+status = 200
