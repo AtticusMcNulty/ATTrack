@@ -1,22 +1,16 @@
 body {
-    font-family: "poppins";
-    margin: 0;
-    background: #000000;
+  font-family: "poppins";
+  margin: 0;
+  background: #000000;
 }
 
 .stat_letter_spacing::after {
-    content: attr(data-content);
-    letter-spacing: 2px; /* Adjust the value as needed */
+  content: attr(data-content);
+  letter-spacing: 2px; /* Adjust the value as needed */
 }
 
-
-
-
-
-
-
-
 /******************************* LOGIN *******************************/
+/*
 #login_section {
     width: 100vw;
     height: 100vh;
@@ -101,1289 +95,1292 @@ body {
 #login_btn:active {
     outline: 1px solid white;
 }
-
-
-
-
-
-
-
-
+*/
 
 /******************************* TABS *******************************/
 #tab_section {
-    background: #1D1D1D;
-    color: white;
+  background: #1d1d1d;
+  color: white;
 
-    font-family: "poppins";
+  font-family: "poppins";
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 
-    max-height: 125px;
+  max-height: 125px;
 }
 
 .tab_container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .tab_container.active {
-    color: #52b788;
+  color: #52b788;
 }
 
 .tabs {
-    font-size: 2vmin;
+  font-size: 2vmin;
 
-    padding: 4vmin 0px;
+  padding: 4vmin 0px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .tabs:hover {
-    color: #52b788;
+  color: #52b788;
 }
 
 #profile_picture {
-    width: 8vmin;
+  width: 8vmin;
 
-    margin: 0px;
-    cursor: pointer;
+  margin: 0px;
+  cursor: pointer;
 }
 
 [data-tab-content] {
-    display: none; /* none */
+  display: none; /* none */
 }
 
 .active[data-tab-content] {
-    display: block;
+  display: block;
 }
 
 .tab_image {
-    width: 25px;
-    height: 25px;
+  width: 25px;
+  height: 25px;
 
-    display: none;
+  display: none;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {
-    .tabs {
-        font-size: 1.8vmin;
-    }
+  .tabs {
+    font-size: 1.8vmin;
+  }
 }
 
 @media (min-width: 900px) {
-    .tab_image {
-        display: block;
-    
-        padding-left: 10px;
-    }
+  .tab_image {
+    display: block;
 
-    #tab_in_game_image {
-        width: 30px;
-        height: 30px;
+    padding-left: 10px;
+  }
 
-        padding-left: 5px;
-    }
+  #tab_in_game_image {
+    width: 30px;
+    height: 30px;
 
-    #tab_highscore_image {
-        width: 30px;
-        height: 30px;
-    }
+    padding-left: 5px;
+  }
 
-    #tab_history_image {
-        width: 37px;
-        height: 37px;
+  #tab_highscore_image {
+    width: 30px;
+    height: 30px;
+  }
 
-        padding-left: 5px;
-    }
+  #tab_history_image {
+    width: 37px;
+    height: 37px;
+
+    padding-left: 5px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /******************************* IN GAME SECTION *******************************/
 
 #in_game_section {
-    background: #1D1D1D;
+  background: #1d1d1d;
 
-    border: 0px solid white;
-    border-radius: 15px;
+  border: 0px solid white;
+  border-radius: 15px;
 
-    margin: 5px auto;
-    padding: 5px;
+  margin: 5px auto;
+  padding: 5px;
 
-    max-width: 600px;
+  max-width: 600px;
 }
 
 /* STATS */
 #stats {
-    background: #1D1D1D;
+  background: #1d1d1d;
 
-    border: 0.5vmin solid white;
-    border-radius: 3vmin;
+  border: 0.5vmin solid white;
+  border-radius: 3vmin;
 
-    padding: 1vmin 0vmin 1vmin 1vmin;
-    margin: 0px 15px;
-    
-    display: flex;
-    flex-direction: column;
+  padding: 1vmin 0vmin 1vmin 1vmin;
+  margin: 0px 15px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* TIMER */
 #timer_header {
-    font-family: "poppins";
-    text-align: center;
-    
-    color: white;
-    background: #1D1D1D;
+  font-family: "poppins";
+  text-align: center;
 
-    margin: 0px 10px;
-    
-    font-size: 3.5vmin;
+  color: white;
+  background: #1d1d1d;
+
+  margin: 0px 10px;
+
+  font-size: 3.5vmin;
 }
 
 #timer_btns {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
 }
 
 .timer_btn {
-    background: white;
-    font-family: "poppins";
-    font-size: 2.25vmin;
+  background: white;
+  font-family: "poppins";
+  font-size: 2.25vmin;
 
-    border: 0px;
-    border-radius: 25px;
+  border: 0px;
+  border-radius: 25px;
 
-    padding: 4px 15px;
-    margin-top: 10px;
+  padding: 4px 15px;
+  margin-top: 10px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .timer_btn:hover {
-    transform: translateZ(0) scale(1.02);
-    box-shadow: 0 0 0 1.5px #52b788;
+  transform: translateZ(0) scale(1.02);
+  box-shadow: 0 0 0 1.5px #52b788;
 }
 
 /* SCORELINE */
 #scoreline {
-    color: white;
-    font-family: "poppins";
+  color: white;
+  font-family: "poppins";
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #scoreline_el1 {
-    margin-left: 5px;
-    font-size: 3vmin;
-    font-weight: 500;
+  margin-left: 5px;
+  font-size: 3vmin;
+  font-weight: 500;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #scoreline_el2 {
-    margin-left: 5px;
-    font-size: 3vmin;
-    font-weight: 500;
+  margin-left: 5px;
+  font-size: 3vmin;
+  font-weight: 500;
 }
 
 #scoreline_el3 {
-    background: #1D1D1D;
-    color: white;
+  background: #1d1d1d;
+  color: white;
 
-    font-family: "poppins";
-    font-size: 3vmin;
-    font-weight: 500;
+  font-family: "poppins";
+  font-size: 3vmin;
+  font-weight: 500;
 
-    margin-left: 5px;
-    padding: 0px;
+  margin-left: 5px;
+  padding: 0px;
 
-    border: 0px;
+  border: 0px;
 
-    min-width: 50px;
+  min-width: 50px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #scoreline_el3:focus {
-    outline: none;
+  outline: none;
 }
 
 #scoreline_el3::placeholder {
-    color: white;
+  color: white;
 }
 
 #scoreline_el3:focus::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 /* HEADERS */
 #in_game_header_section {
-    padding: 0px;
+  padding: 0px;
 }
 
 .stat_header {
-    color: white;
-    font-size: 2.5vmin;
-    font-weight: 500;
-    padding-left: 10px;
+  color: white;
+  font-size: 2.5vmin;
+  font-weight: 500;
+  padding-left: 10px;
 
-    /* border: 3px solid #F94F6D; */
-    border-radius: 15px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  /* border: 3px solid #F94F6D; */
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 
-    width: 12vmin;
-    max-width: 150px;
+  width: 12vmin;
+  max-width: 150px;
 
-    margin: 15px 0px;
+  margin: 15px 0px;
 }
 
 #in_game_header {
-    text-align: center;
-    color: white;
-    font-family: "poppins";
-    font-size: 5vmin;
+  text-align: center;
+  color: white;
+  font-family: "poppins";
+  font-size: 5vmin;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 #match_rating_header {
-    color: white;
+  color: white;
 
-    border: 0px;
-    border-radius: 25px;
-    
-    margin: 8px 0px 4px 2px;
-    padding: 5px 10px;
+  border: 0px;
+  border-radius: 25px;
 
-    font-family: "poppins";
-    font-size: 2.75vmin;
-    font-weight: 400;
+  margin: 8px 0px 4px 2px;
+  padding: 5px 10px;
+
+  font-family: "poppins";
+  font-size: 2.75vmin;
+  font-weight: 400;
 }
 
 /* BUTTONS */
 .stats_btn {
-    background: white;
+  background: white;
 
-    font-family: "poppins";
-    color: black;
-    font-size: 1.9vmin;
-    text-align: center;
+  font-family: "poppins";
+  color: black;
+  font-size: 1.9vmin;
+  text-align: center;
 
-    width: 20vmin;
+  width: 20vmin;
 
-    border: 0px solid black;
-    border-radius: 20px;
+  border: 0px solid black;
+  border-radius: 20px;
 
-    margin-left: 4vmin;
-    padding: 8px 12px;
+  margin-left: 4vmin;
+  padding: 8px 12px;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .stats_btn:active {
-    transform: scale(1.015);
+  transform: scale(1.015);
 }
 
 /* ROWS */
 .stat_row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: start;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
 }
 
 #ingame_modifier_btns {
-    margin: 8px 10px 0px 10px;
-    padding: 10px 0px;
+  margin: 8px 10px 0px 10px;
+  padding: 10px 0px;
 
-    border-radius: 15px;
+  border-radius: 15px;
 }
 
 #update_stats_btn {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    background: #52b788;
-    color: white;
+  background: #52b788;
+  color: white;
 
-    border: 0px;
-    border-radius: 25px;
-    
-    margin-left: 5px;
-    padding: 5px 10px;
-    
-    font-size: 2vmin;
-    font-weight: 500;
+  border: 0px;
+  border-radius: 25px;
 
-    cursor: pointer;
+  margin-left: 5px;
+  padding: 5px 10px;
+
+  font-size: 2vmin;
+  font-weight: 500;
+
+  cursor: pointer;
 }
 
 #delete_mode_btn {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    background: #c1121f;
-    color: white;
+  background: #c1121f;
+  color: white;
 
-    border: 0px;
-    border-radius: 25px;
-    
-    margin-left: 5px;
-    padding: 5px 10px;
-    
-    font-size: 2vmin;
-    font-weight: 500;
+  border: 0px;
+  border-radius: 25px;
 
-    cursor: pointer;
+  margin-left: 5px;
+  padding: 5px 10px;
+
+  font-size: 2vmin;
+  font-weight: 500;
+
+  cursor: pointer;
 }
 
-#delete_mode_btn:hover, #update_stats_btn:hover {
-    transform: translateZ(0) scale(1.02);
-    box-shadow: 0 0 0 0.7px white;
+#delete_mode_btn:hover,
+#update_stats_btn:hover {
+  transform: translateZ(0) scale(1.02);
+  box-shadow: 0 0 0 0.7px white;
 }
 
 #timer_start {
-    color: black;
+  color: black;
 }
 
 #timer_pause {
-    color: black;
-    margin-right: 5px;
+  color: black;
+  margin-right: 5px;
 }
 
 @media (min-width: 600px) {
-    .stat_header {
-        font-size: 1.8vmin;
-        width: 9vmin;
-    }
+  .stat_header {
+    font-size: 1.8vmin;
+    width: 9vmin;
+  }
 
-    .stats_btn {
-        font-size: 1.5vmin;
-        width: 17vmin;
-    }
+  .stats_btn {
+    font-size: 1.5vmin;
+    width: 17vmin;
+  }
 
-    #match_rating_header, 
-    #scoreline_el1, #scoreline_el2, #scoreline_el3, #scoreline_el3::placeholder, 
-    #timer_header {
-        font-size: 2.25vmin;
-    }
+  #match_rating_header,
+  #scoreline_el1,
+  #scoreline_el2,
+  #scoreline_el3,
+  #scoreline_el3::placeholder,
+  #timer_header {
+    font-size: 2.25vmin;
+  }
 
-    .timer_btn {
-        font-size: 1.75vmin;
-    }
+  .timer_btn {
+    font-size: 1.75vmin;
+  }
 
-    #delete_mode_btn, #update_stats_btn {
-        font-size: 1.6vmin;
-    }
+  #delete_mode_btn,
+  #update_stats_btn {
+    font-size: 1.6vmin;
+  }
 }
 
 @media (min-width: 750px) {
-    .stats_btn {
-        font-size: 1.35vmin;
-        width: 13.5vmin;
-    }
+  .stats_btn {
+    font-size: 1.35vmin;
+    width: 13.5vmin;
+  }
 }
-
-
-
-
-
-
-
-
-
 
 /************************* PERFORMANCE ANALYTICS SECTION ************************/
 #performance_section {
-    background: #1D1D1D;
-    border: 0px solid white;
-    border-radius: 15px;
+  background: #1d1d1d;
+  border: 0px solid white;
+  border-radius: 15px;
 
-    margin: 5px auto;
-    padding: 5px;
+  margin: 5px auto;
+  padding: 5px;
 
-    max-width: 600px;
+  max-width: 600px;
 
-    font-family: "poppins";
+  font-family: "poppins";
 }
 
 #performance_header_section {
-    border: 0px solid white;
-    border-radius: 25px;
+  border: 0px solid white;
+  border-radius: 25px;
 }
 
 #performance_stats_section {
-    margin: 0px 10px 10px 0px;
-    padding: 5px 10px;
-    
-    border: 0px solid white;
-    border-radius: 25px;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  margin: 0px 10px 10px 0px;
+  padding: 5px 10px;
+
+  border: 0px solid white;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #performance_header {
-    text-align: center;
-    color: white;
-    font-size: 5vmin;
+  text-align: center;
+  color: white;
+  font-size: 5vmin;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 #analytics_chart_dropdown {
-    display: block;
-    width: 120px;
-    margin: 20px auto 15px auto;
-    padding: 3px 2px 3px 10px;
-    text-align: center;
-    border-radius: 15px;
-    background-color: white;
-    font-family: "poppins";
-    outline: none;
+  display: block;
+  width: 120px;
+  margin: 20px auto 15px auto;
+  padding: 3px 2px 3px 10px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: white;
+  font-family: "poppins";
+  outline: none;
 }
 
 #analytics_chart {
-    width: 100%;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .performance_col {
-    color: white;
+  color: white;
 
-    padding-left: 15px;
+  padding-left: 15px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #comparison_performance {
-    text-align: center;
+  text-align: center;
 }
 
 #games_played {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #games_played_header {
-    color: white;
+  color: white;
 
-    border: 0px;
-    border-radius: 25px;
-    
-    margin: 8px 0px 0px 0px;
-    padding: 5px 10px;
-    
-    font-size: 2.5vmin;
-    font-weight: normal;
+  border: 0px;
+  border-radius: 25px;
+
+  margin: 8px 0px 0px 0px;
+  padding: 5px 10px;
+
+  font-size: 2.5vmin;
+  font-weight: normal;
 }
 
 #games_played_btn_minus {
-    font-size: 2vmin;
+  font-size: 2vmin;
 
-    margin: 7px 0px 0px 7px;
-    padding: 4px 8.5px;
+  margin: 7px 0px 0px 7px;
+  padding: 4px 8.5px;
 
-    border-radius: 6px;
-    cursor: pointer;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 #games_played_btn_minus:active {
-    transform: scale(1.03);
-    border: 0.5px solid white;
+  transform: scale(1.03);
+  border: 0.5px solid white;
 }
 
 #games_played_btn_plus {
-    font-size: 2vmin;
+  font-size: 2vmin;
 
-    margin: 7px 0px 0px 5px;
-    padding: 4px 7.5px;
+  margin: 7px 0px 0px 5px;
+  padding: 4px 7.5px;
 
-    border-radius: 6px;
-    cursor: pointer;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
 #games_played_btn_plus:active {
-    transform: scale(1.03);
-    border: 0.5px solid white;
+  transform: scale(1.03);
+  border: 0.5px solid white;
 }
 
-#current_game_header, #per_game_header, #comparison_header {
-    font-size: 3vmin;
-    font-weight: 500;
+#current_game_header,
+#per_game_header,
+#comparison_header {
+  font-size: 3vmin;
+  font-weight: 500;
 }
 
-.current_game_stats, .per_game_stats, .comparison_stats {
-    font-weight: 400;
-    font-size: 2.5vmin;
+.current_game_stats,
+.per_game_stats,
+.comparison_stats {
+  font-weight: 400;
+  font-size: 2.5vmin;
 
-    margin: 12px 0px;
+  margin: 12px 0px;
 }
 
 @media (min-width: 600px) {
-    .current_game_stats, .per_game_stats, .comparison_stats, #games_played_header{
-        font-size: 1.75vmin;
-    }
+  .current_game_stats,
+  .per_game_stats,
+  .comparison_stats,
+  #games_played_header {
+    font-size: 1.75vmin;
+  }
 
-    #current_game_header, #per_game_header, #comparison_header {
-        font-size: 2.25vmin;
-    }
+  #current_game_header,
+  #per_game_header,
+  #comparison_header {
+    font-size: 2.25vmin;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /********************************* FEEDBACK SECTION ********************************/
 #feedback_section {
-    background: #1D1D1D;
+  background: #1d1d1d;
 
-    border: 0px solid white;
-    border-radius: 15px;
+  border: 0px solid white;
+  border-radius: 15px;
 
-    margin: 5px auto;
-    padding: 5px;
+  margin: 5px auto;
+  padding: 5px;
 
-    max-width: 600px;
+  max-width: 600px;
 }
 
 #feedback_stats_section {
-    color: white;
-    font-size: 2.75vmin;
-    
-    border: 0px solid white;
-    border-radius: 25px;
+  color: white;
+  font-size: 2.75vmin;
+
+  border: 0px solid white;
+  border-radius: 25px;
 }
 
 #feedback_header {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    text-align: center;
-    color: white;
-    font-size: 5vmin;
+  text-align: center;
+  color: white;
+  font-size: 5vmin;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .feedback_stat {
-    margin-left: 20px;
+  margin-left: 20px;
 
-    font-size: 2.1vmin;
-    font-weight: 500;
+  font-size: 2.1vmin;
+  font-weight: 500;
 }
 
 .advice {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 #personal_notes_header {
-    font-family: "poppins";
-    font-size: 2.8vmin;
-    color: white;
-    text-align: center;
+  font-family: "poppins";
+  font-size: 2.8vmin;
+  color: white;
+  text-align: center;
 
-    margin-top: 25px;
-    margin-bottom: 10px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
 
 #notes {
-    background-color: #1D1D1D;
+  background-color: #1d1d1d;
 
-    font-family: "poppins";
-    color: white;
+  font-family: "poppins";
+  color: white;
 
-    width: 90%;
+  width: 90%;
 
-    padding: 10px;
-    margin: 0px 0px 0px 15px;
+  padding: 10px;
+  margin: 0px 0px 0px 15px;
 
-    border: 0.5px solid white;
-    border-radius: 15px;
+  border: 0.5px solid white;
+  border-radius: 15px;
 }
 
 textarea::placeholder {
-    color: white;
+  color: white;
 }
 
 #notes:focus {
-    outline: none;
+  outline: none;
 }
 
 @media (min-width: 700px) {
-    #notes {
-        width: 92%;
-    }
+  #notes {
+    width: 92%;
+  }
 
-    .feedback_stat {    
-        font-size: 2vmin;
-    }
+  .feedback_stat {
+    font-size: 2vmin;
+  }
 
-    #games_played_btn_minus, #games_played_btn_plus {
-        font-size: 1.75vmin;
+  #games_played_btn_minus,
+  #games_played_btn_plus {
+    font-size: 1.75vmin;
 
-        padding: 3px 8px;
-    }
+    padding: 3px 8px;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /********************************* ALL TIME SECTION ********************************/
 #all_time_section {
-    background: #1D1D1D;
+  background: #1d1d1d;
 
-    border: 0px solid white;
-    border-radius: 15px;
+  border: 0px solid white;
+  border-radius: 15px;
 
-    margin: 5px auto;
-    padding: 5px;
+  margin: 5px auto;
+  padding: 5px;
 
-    max-width: 600px;
+  max-width: 600px;
 
-    font-family: "poppins";
+  font-family: "poppins";
 }
 
 #all_time_header {
-    color: white;
-    font-size: 5vmin;
+  color: white;
+  font-size: 5vmin;
 
-    text-align: center;
+  text-align: center;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 #all_time {
-    margin: 0px 0px 0px 10px;
-    padding: 0px 5px 5px 5px;
-    
-    border: 0px solid white;
-    border-radius: 25px;
-    
-    display: flex;
-    flex-direction: row;
+  margin: 0px 0px 0px 10px;
+  padding: 0px 5px 5px 5px;
+
+  border: 0px solid white;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: row;
 }
 
 #all_time_stats {
-    color: white;
+  color: white;
 
-    font-size: 2.25vmin;
+  font-size: 2.25vmin;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 0px 0px 0px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px 0px 0px 8px;
 }
 
 .all_time_stat {
-    margin: 12px 0px;
-    
-    font-weight: 400;
+  margin: 12px 0px;
+
+  font-weight: 400;
 }
 
 #all_time_btns_plus {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    margin: 0px 10px 0px auto;
+  margin: 0px 10px 0px auto;
 }
 
 #all_time_btns_minus {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 
-    margin: 0px 10px 0px 0px;
+  margin: 0px 10px 0px 0px;
 }
 
 .all_time_btn_plus {
-    background-color: #52b788;
-    color: white;
-    font-size: 1.8vmin;
-    font-weight: bold;
+  background-color: #52b788;
+  color: white;
+  font-size: 1.8vmin;
+  font-weight: bold;
 
-    border: 0px solid white;
-    border-radius: 8px;
+  border: 0px solid white;
+  border-radius: 8px;
 
-    padding: 4.2px 9px;
-    cursor: pointer;
-    
-    transition: transform 0.3s;
+  padding: 4.2px 9px;
+  cursor: pointer;
+
+  transition: transform 0.3s;
 }
 
 .all_time_btn_minus {
-    background-color: #c1121f;
-    color: white;
-    font-size: 1.8vmin;
-    font-weight: bold;
+  background-color: #c1121f;
+  color: white;
+  font-size: 1.8vmin;
+  font-weight: bold;
 
-    border: 0px solid white;
-    border-radius: 8px;
+  border: 0px solid white;
+  border-radius: 8px;
 
-    padding: 4.2px 10px;
-    cursor: pointer;
+  padding: 4.2px 10px;
+  cursor: pointer;
 
-    transition: transform 0.3s;
+  transition: transform 0.3s;
 }
 
-.all_time_btn_plus:hover, .all_time_btn_minus:hover {
-    transform: translateZ(0) scale(1.03);
-    box-shadow: 0 0 0 1px white;
+.all_time_btn_plus:hover,
+.all_time_btn_minus:hover {
+  transform: translateZ(0) scale(1.03);
+  box-shadow: 0 0 0 1px white;
 }
 
 .all_time_btn_blank_plus {
-    background-color: #1D1D1D;
-    color: #1D1D1D;
-    font-size: 1.8vmin;
+  background-color: #1d1d1d;
+  color: #1d1d1d;
+  font-size: 1.8vmin;
 
-    border: 0px solid white;
-    border-radius: 6px;
+  border: 0px solid white;
+  border-radius: 6px;
 
-    padding: 4px 8px;
+  padding: 4px 8px;
 }
 
 .all_time_btn_blank_minus {
-    background-color: #1D1D1D;
-    color: #1D1D1D;
-    font-size: 1.8vmin;
+  background-color: #1d1d1d;
+  color: #1d1d1d;
+  font-size: 1.8vmin;
 
-    border: 0px solid white;
-    border-radius: 6px;
+  border: 0px solid white;
+  border-radius: 6px;
 
-    padding: 4.2px 9px;
+  padding: 4.2px 9px;
 }
 
 #record_at_btn_minus {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 @media (min-width: 700px) {
-    #all_time_stats {
-        font-size: 1.75vmin;
-    }
+  #all_time_stats {
+    font-size: 1.75vmin;
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /********************************* HIGHSCORE SECTION ********************************/
 #highscore_header {
-    color: white;
-    font-size: 5vmin;
+  color: white;
+  font-size: 5vmin;
 
-    text-align: center;
+  text-align: center;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 #highscore_section {
-    background: #1D1D1D;
-    
-    margin: 5px auto;
-    padding: 5px;
-    
-    border: 0px solid white;
-    border-radius: 15px;
+  background: #1d1d1d;
 
-    max-width: 600px;
-    
-    text-align: center;
+  margin: 5px auto;
+  padding: 5px;
 
-    font-family: "poppins";
+  border: 0px solid white;
+  border-radius: 15px;
+
+  max-width: 600px;
+
+  text-align: center;
+
+  font-family: "poppins";
 }
 
 #highscore_stats {
-    color: white;
-    font-size: 2.25vmin;
+  color: white;
+  font-size: 2.25vmin;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    margin: 0px 0px 0px 8px;
+  margin: 0px 0px 0px 8px;
 }
 
 .highscore_stat {
-    margin: 10px 0px;
-    
-    font-weight: 400;
+  margin: 10px 0px;
+
+  font-weight: 400;
 }
 
 @media (min-width: 700px) {
-    #highscore_stats {
-        font-size: 1.75vmin;
-    }
+  #highscore_stats {
+    font-size: 1.75vmin;
+  }
 }
-
-
-
-
-
-
 
 /********************************* GAMES LOG SECTION ********************************/
 #games_log {
-    width: 2vw;
+  width: 2vw;
 }
-
-
-
-
-
-
 
 /********************************* ACHIEVEMENTS SECTION ********************************/
 
 /* entire achievements section */
 #achievements_section {
-    background-color: #1D1D1D;
-    color: white;
-    
-    border: 0px solid white;
-    border-radius: 15px;
-    
-    margin: 5px auto;
-    padding: 5px;
+  background-color: #1d1d1d;
+  color: white;
 
-    max-width: 600px;
+  border: 0px solid white;
+  border-radius: 15px;
+
+  margin: 5px auto;
+  padding: 5px;
+
+  max-width: 600px;
 }
 
 /* main header of achievements section */
 #achievements_header {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    text-align: center;
-    font-size: 5vmin;
+  text-align: center;
+  font-size: 5vmin;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 #achievement_tabs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-    list-style-type: none; /* remove bullet points */
+  list-style-type: none; /* remove bullet points */
 
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .achievement_tab {
-    margin: 0px 0px 10px 0px;
-    font-size: 3vmin;
+  margin: 0px 0px 10px 0px;
+  font-size: 3vmin;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .achievement_tab.active {
-    color: #52b788;
+  color: #52b788;
 }
-    
+
 .achievement_tab:hover {
-    color: #52b788;
-    box-shadow: 0px 2px 0px 0px #52b788;
+  color: #52b788;
+  box-shadow: 0px 2px 0px 0px #52b788;
 }
-    
+
 [data-tab-content-achievement] {
-    display: none; /* none */
+  display: none; /* none */
 }
-    
+
 [data-tab-content-achievement].active {
-    display: block;
+  display: block;
 }
 
 @media (min-width: 600px) {
-    .achievement_tab {
-        font-size: 2.15vmin;
-    }
+  .achievement_tab {
+    font-size: 2.15vmin;
+  }
 }
 
 /* a single achievement */
 .achievement {
-    /* background-image: linear-gradient(to bottom right, #52B788, #8852b7); */
-    background-color: #8852b7;
+  /* background-image: linear-gradient(to bottom right, #52B788, #8852b7); */
+  background-color: #8852b7;
 
-    border-radius: 15px;
+  border-radius: 15px;
 
-    padding: 10px 15px 10px 10px;
-    margin: 12.5px 10px 10px 10px;
+  padding: 10px 15px 10px 10px;
+  margin: 12.5px 10px 10px 10px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-#achievement_3, #achievement_4, #achievement_5, #achievement_6, #achievement_7,
-#achievement_11, #achievement_12, #achievement_13, #achievement_14, #achievement_15,
-#achievement_40, #achievement_41, #achievement_42, #achievement_43, #achievement_44, #achievement_45,
-#achievement_76, #achievement_77, #achievement_78, #achievement_79, #achievement_80, #achievement_81 {
-    background-color: #5b347c;
+#achievement_3,
+#achievement_4,
+#achievement_5,
+#achievement_6,
+#achievement_7,
+#achievement_11,
+#achievement_12,
+#achievement_13,
+#achievement_14,
+#achievement_15,
+#achievement_40,
+#achievement_41,
+#achievement_42,
+#achievement_43,
+#achievement_44,
+#achievement_45,
+#achievement_76,
+#achievement_77,
+#achievement_78,
+#achievement_79,
+#achievement_80,
+#achievement_81 {
+  background-color: #5b347c;
 }
 
-#achievement_106, #achievement_107, #achievement_108,
-#achievement_16, #achievement_17, #achievement_18,
-#achievement_46, #achievement_47, #achievement_48, #achievement_49, #achievement_50, #achievement_51,
-#achievement_82, #achievement_83, #achievement_84, #achievement_85, #achievement_86, #achievement_87 {
-    background-color: #5282b7;
+#achievement_106,
+#achievement_107,
+#achievement_108,
+#achievement_16,
+#achievement_17,
+#achievement_18,
+#achievement_46,
+#achievement_47,
+#achievement_48,
+#achievement_49,
+#achievement_50,
+#achievement_51,
+#achievement_82,
+#achievement_83,
+#achievement_84,
+#achievement_85,
+#achievement_86,
+#achievement_87 {
+  background-color: #5282b7;
 }
 
-#achievement_109, #achievement_110, #achievement_111, #achievement_112, #achievement_113,
-#achievement_19, #achievement_20, #achievement_21,
-#achievement_52, #achievement_53, #achievement_54, #achievement_55, #achievement_56, #achievement_57,
-#achievement_88, #achievement_89, #achievement_90, #achievement_91, #achievement_92, #achievement_93 {
-    background-color: #2c598b;
+#achievement_109,
+#achievement_110,
+#achievement_111,
+#achievement_112,
+#achievement_113,
+#achievement_19,
+#achievement_20,
+#achievement_21,
+#achievement_52,
+#achievement_53,
+#achievement_54,
+#achievement_55,
+#achievement_56,
+#achievement_57,
+#achievement_88,
+#achievement_89,
+#achievement_90,
+#achievement_91,
+#achievement_92,
+#achievement_93 {
+  background-color: #2c598b;
 }
 
-#achievement_24, #achievement_25,
-#achievement_58, #achievement_59, #achievement_60, #achievement_61, #achievement_62, #achievement_63,
-#achievement_94, #achievement_95, #achievement_96, #achievement_97, #achievement_98, #achievement_99  {
-    background-color: #B75552;
+#achievement_24,
+#achievement_25,
+#achievement_58,
+#achievement_59,
+#achievement_60,
+#achievement_61,
+#achievement_62,
+#achievement_63,
+#achievement_94,
+#achievement_95,
+#achievement_96,
+#achievement_97,
+#achievement_98,
+#achievement_99 {
+  background-color: #b75552;
 }
 
-#achievement_26, #achievement_27,
-#achievement_64, #achievement_65, #achievement_66, #achievement_67, #achievement_68, #achievement_69,
-#achievement_100, #achievement_101, #achievement_102, #achievement_103, #achievement_104, #achievement_105 {
-    background-color: #983733;
+#achievement_26,
+#achievement_27,
+#achievement_64,
+#achievement_65,
+#achievement_66,
+#achievement_67,
+#achievement_68,
+#achievement_69,
+#achievement_100,
+#achievement_101,
+#achievement_102,
+#achievement_103,
+#achievement_104,
+#achievement_105 {
+  background-color: #983733;
 }
 
-#achievement_28, #achievement_29, #achievement_30 {
-    background-color: #81b752;
+#achievement_28,
+#achievement_29,
+#achievement_30 {
+  background-color: #81b752;
 }
 
-#achievement_31, #achievement_32, #achievement_33 {
-    background-color: #527731;
+#achievement_31,
+#achievement_32,
+#achievement_33 {
+  background-color: #527731;
 }
 
-#achievement_22, #achievement_23 {
-    background: #317772;
+#achievement_22,
+#achievement_23 {
+  background: #317772;
 }
 
 /* title and progress bar of achievement */
 #achievement_top {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* title of achievement */
 .achievement_header {
-    margin: 0;
+  margin: 0;
 
-    font-size: 2.5vmin;
+  font-size: 2.5vmin;
 }
 
 /* outer progression bar class */
 .achievement_progressbar {
-    background-color: white;
+  background-color: white;
 
-    border-radius: 13px;
+  border-radius: 13px;
 
-    padding: 3px;
+  padding: 3px;
 
-    margin: 6px 0px 5px 10px;
+  margin: 6px 0px 5px 10px;
 
-    width: 45vmin;
+  width: 45vmin;
 }
 
 /* inner progression bar class */
 .achievement_progressbar_inner {
-    /*background-color: #c3447f; */
-    background: #52b788;
-    
-    width: 0%;
-    height: 10px;
-    border-radius: 10px;
+  /*background-color: #c3447f; */
+  background: #52b788;
 
-    font-size: 1.45vmin !important;
+  width: 0%;
+  height: 10px;
+  border-radius: 10px;
+
+  font-size: 1.45vmin !important;
 }
 
 /* description of achievement */
 .achievement_description {
-    margin: 10px 0px 5px 0px;
-    
-    font-size: 2.25vmin;
-    font-weight: 300;
+  margin: 10px 0px 5px 0px;
+
+  font-size: 2.25vmin;
+  font-weight: 300;
 }
 
 /* point total of achievement e0bb36 */
 .achievement_points {
-    color: #e0bb36;
+  color: #e0bb36;
 
-    margin: 0px 0px 5px 0px;
-    
-    font-size: 2.8vmin;
-    font-weight: 500;
-    
-    text-align: end;
+  margin: 0px 0px 5px 0px;
+
+  font-size: 2.8vmin;
+  font-weight: 500;
+
+  text-align: end;
 }
 
-@media(min-width: 600px) {
-    .achievement_description {
-        font-size: 1.5vmin;
-    }
+@media (min-width: 600px) {
+  .achievement_description {
+    font-size: 1.5vmin;
+  }
 
-    .achievement_points {
-        font-size: 1.75vmin;
-    }
+  .achievement_points {
+    font-size: 1.75vmin;
+  }
 
-    .achievement_progressbar_inner {
-        font-size: 1vmin !important;
-    }
+  .achievement_progressbar_inner {
+    font-size: 1vmin !important;
+  }
 
-    .achievement_header {
-        margin: 0;
-    
-        font-size: 1.9vmin;
-    }
+  .achievement_header {
+    margin: 0;
+
+    font-size: 1.9vmin;
+  }
 }
 
 .seperator {
-    border: 0.1px solid white;
+  border: 0.1px solid white;
 
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 .prize {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 
-    border: 0px;
-    border-radius: 15px;
+  border: 0px;
+  border-radius: 15px;
 
-    padding: 5px 0px 5px 10px;
-    margin: 5px 10px 10px 10px;
+  padding: 5px 0px 5px 10px;
+  margin: 5px 10px 10px 10px;
 }
 
 .prize_header {
-    margin: 0;
+  margin: 0;
 }
 
 .prize_bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .prize_button {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    background: #52b788;
+  background: #52b788;
 
-    border: 0px;
-    border-radius: 15px;
+  border: 0px;
+  border-radius: 15px;
 
-    padding: 2px 8px 2px 8px;
-    margin: 30px 10px 3px 0px;
+  padding: 2px 8px 2px 8px;
+  margin: 30px 10px 3px 0px;
 }
 
 .prize_cost {
-    margin: 30.5px 0px 0px 0px;
+  margin: 30.5px 0px 0px 0px;
 }
 
 .swal2-popup {
-    width: 75vmin !important;
-    height: 600px !important;
-    font-family: "poppins" !important;
+  width: 75vmin !important;
+  height: 600px !important;
+  font-family: "poppins" !important;
 }
-
-
-
-
-
-
 
 /********************************* PROFILE SECTION ********************************/
 #footer {
-    background: #1D1D1D;
-    box-shadow: 0 50vh 0 50vh #1D1D1D;
+  background: #1d1d1d;
+  box-shadow: 0 50vh 0 50vh #1d1d1d;
 }
 
 #profile_section {
-    background-color: #1D1D1D;
-    color: whitesmoke;
+  background-color: #1d1d1d;
+  color: whitesmoke;
 
-    margin: 5px auto;
-    padding: 5px;
-    
-    border: 0px solid white;
-    border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px;
 
-    max-width: 600px;
+  border: 0px solid white;
+  border-radius: 15px;
+
+  max-width: 600px;
 }
 
 #profile_header {
-    font-family: "poppins";
+  font-family: "poppins";
 
-    text-align: center;
-    font-size: 5vmin;
+  text-align: center;
+  font-size: 5vmin;
 
-    margin-top: 10px;
-    margin-bottom: 8px;
+  margin-top: 10px;
+  margin-bottom: 8px;
 }
 
 .profile_info {
-    text-align: center;
+  text-align: center;
 
-    font-size: 2vmin;
-    font-weight: 500;
+  font-size: 2vmin;
+  font-weight: 500;
 }
 
 #profile_update_info_btn {
-    display: block;
-    padding: 5px 10px;
-    margin: 15px auto 20px auto;
+  display: block;
+  padding: 5px 10px;
+  margin: 15px auto 20px auto;
 
-    font-family: "poppins";
+  font-family: "poppins";
 
-    border: 0px;
-    border-radius: 6px;
-    
-    background-color: #52b788;
-    color: white;
+  border: 0px;
+  border-radius: 6px;
 
-    cursor: pointer;
+  background-color: #52b788;
+  color: white;
+
+  cursor: pointer;
 }
 
 #profile_update_info_btn:active {
-    outline: 1px solid white;
+  outline: 1px solid white;
 }
 
 .horizontal_line {
-    border: 0.1px solid white;
-    margin-top: 0px;
-    margin-bottom: 2vmin;
+  border: 0.1px solid white;
+  margin-top: 0px;
+  margin-bottom: 2vmin;
 }
 
 #gear_header {
-    margin-top: 50px;
-    margin-left: -1px;
-    margin-bottom: 0px;
+  margin-top: 50px;
+  margin-left: -1px;
+  margin-bottom: 0px;
 
-    text-align: center;
+  text-align: center;
 }
 
 #gear_section {
-    margin: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .gear_column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
-#shorts, #badge {
-    margin-top: 20px;
+#shorts,
+#badge {
+  margin-top: 20px;
 }
 
 .gear {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background: #323232;
+  background: #323232;
 
-    padding: 10px 20px;
+  padding: 10px 20px;
 
-    border: 0px solid white;
-    border-radius: 10px;
+  border: 0px solid white;
+  border-radius: 10px;
 }
 
 .kit_select {
-    font-family: GT Walsheim;
-    background-color: white;
- 
-    border-radius: 10px;
-   
-    padding: 2px 4px;
-    margin: 0px 0px 10px 0px;
+  font-family: GT Walsheim;
+  background-color: white;
+
+  border-radius: 10px;
+
+  padding: 2px 4px;
+  margin: 0px 0px 10px 0px;
 }
 
 .gear_image {
-    width: 180px;
-    height: 180px;
+  width: 180px;
+  height: 180px;
 
-    border: 0px solid #5282b7;
-    border-radius: 15px;
+  border: 0px solid #5282b7;
+  border-radius: 15px;
 }
 
-@media(min-width: 600px) {
-    #profile_information {
-        font-size: 1.5vmin;
-    }
+@media (min-width: 600px) {
+  #profile_information {
+    font-size: 1.5vmin;
+  }
 }
