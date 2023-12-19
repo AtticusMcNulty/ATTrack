@@ -7,6 +7,7 @@
     <title>ATTrack</title>
     <link rel="stylesheet" href="https://use.typekit.net/nul2nsz.css" />
     <link rel="stylesheet" href="score_board.css" />
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
     <!-- Source for notifications -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -14,32 +15,55 @@
 
     <link rel="icon" type="image/x-icon" href="images/favicon/icon.png" />
     <!-- Tab Icon -->
+
+    <script src="score_board.js" defer></script>
   </head>
   <body>
-    <script src="score_board.js" defer></script>
-
-    <!--
-    <div id="login_section">
-        <div id="login_square">
-            <img id="logo"></img>
-            <p id="login_header">Sign into Account</p>
-            <form id="login_field_section">
-                <div class="login_field" id="login_header_section">
-                    <label id="username_text" for="username">Username:</label>
-                    <label id="pw_text" for="pw">Password:</label>
-                </div>
-
-                <div class="login_field" id="login_entry_section">
-                    <input type="text" id="username_entry" autocomplete="off"></input>
-                    <input type="password" id="pw_entry"></input>
-                </div>
-            </form>
-            <button id="login_btn" onclick="runLogin(1)">Login</button>
-        </div>
-    </div>
-    -->
-
     <div id="website">
+      <div id="overlay"></div>
+
+      <div class="info-modal">
+        <span class="close" onclick="closePersonalInfoModal()">
+          &times;
+        </span>
+        <p class="modal-alert">Ensure all fields are filled out.</p>
+        <div class="modal-body">
+          <div class="modal-info">
+            <p>Name:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Age:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Club:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Date of Birth:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Height:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Weight:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Email:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+          <div class="modal-info">
+            <p>Phone:</p>
+            <input class="modal-input" autocomplete="off"></input>
+          </div>
+        </div>
+        <button class="modal-btn" id="set-personal-info-btn" onclick="updatePersonalInfoModal()">Update</button>
+      </div>
+
       <ul id="tab_section">
         <div class="tab_container active" data-tab-target="#in_game_section">
           <li class="tabs">In Game</li>
@@ -3634,14 +3658,12 @@
           </div>
 
           <div id="store_section" data-tab-content-achievement>
-            <div id="prize_1" class="prize" value="everyday">
+            <div id="prize_1" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_1_header">
-                Prize 1 - Choice of Dinner
+                Argentina Jersey
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_1_cost" value="100">
-                  100 pts
-                </h4>
+                <h4 class="prize_cost" id="prize_1_cost" value="250">250 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_1_button"
@@ -3654,10 +3676,10 @@
 
             <div id="prize_2" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_2_header">
-                Prize 2 - Argentina Jersey
+                Argentina Shorts
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_2_cost" value="0">250 pts</h4>
+                <h4 class="prize_cost" id="prize_2_cost" value="250">250 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_2_button"
@@ -3670,10 +3692,10 @@
 
             <div id="prize_3" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_3_header">
-                Prize 3 - Argentina Shorts
+                Argentina Shoes
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_3_cost" value="0">250 pts</h4>
+                <h4 class="prize_cost" id="prize_3_cost" value="250">250 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_3_button"
@@ -3686,10 +3708,10 @@
 
             <div id="prize_4" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_4_header">
-                Prize 4 - Argentina Shoes
+                Argentina Badge
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_4_cost" value="0">250 pts</h4>
+                <h4 class="prize_cost" id="prize_4_cost" value="250">250 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_4_button"
@@ -3702,10 +3724,10 @@
 
             <div id="prize_5" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_5_header">
-                Prize 5 - Argentina Badge
+                Brazil Jersey
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_5_cost" value="0">250 pts</h4>
+                <h4 class="prize_cost" id="prize_5_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_5_button"
@@ -3718,10 +3740,10 @@
 
             <div id="prize_6" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_6_header">
-                Prize 6 - Brazil Jersey
+                Brazil Shorts
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_6_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_6_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_6_button"
@@ -3734,10 +3756,10 @@
 
             <div id="prize_7" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_7_header">
-                Prize 7 - Brazil Shorts
+                Brazil Shoes
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_7_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_7_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_7_button"
@@ -3750,10 +3772,10 @@
 
             <div id="prize_8" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_8_header">
-                Prize 8 - Brazil Shoes
+                Brazil Badge
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_8_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_8_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_8_button"
@@ -3766,10 +3788,10 @@
 
             <div id="prize_9" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_9_header">
-                Prize 9 - Brazil Badge
+                France Jersey
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_9_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_9_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_9_button"
@@ -3782,10 +3804,10 @@
 
             <div id="prize_10" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_10_header">
-                Prize 10 - France Jersey
+                France Shorts
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_10_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_10_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_10_button"
@@ -3798,10 +3820,10 @@
 
             <div id="prize_11" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_11_header">
-                Prize 11 - France Shorts
+                France Shoes
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_11_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_11_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_11_button"
@@ -3814,30 +3836,14 @@
 
             <div id="prize_12" class="prize" value="clothing">
               <h3 class="prize_header" id="prize_12_header">
-                Prize 12 - France Shoes
+                France Badge
               </h3>
               <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_12_cost" value="0">150 pts</h4>
+                <h4 class="prize_cost" id="prize_12_cost" value="150">150 pts</h4>
                 <button
                   class="prize_button"
                   id="prize_12_button"
                   onclick="reedem_prize(12)"
-                >
-                  Redeem
-                </button>
-              </div>
-            </div>
-
-            <div id="prize_13" class="prize" value="clothing">
-              <h3 class="prize_header" id="prize_13_header">
-                Prize 13 - France Badge
-              </h3>
-              <div class="prize_bottom">
-                <h4 class="prize_cost" id="prize_13_cost" value="0">150 pts</h4>
-                <button
-                  class="prize_button"
-                  id="prize_13_button"
-                  onclick="reedem_prize(13)"
                 >
                   Redeem
                 </button>
@@ -3863,14 +3869,14 @@
           <h2 class="profile_info" id="profile_weight">Weight:</h2>
           <h2 class="profile_info" id="profile_email">Email:</h2>
           <h2 class="profile_info" id="profile_phone_number">Phone:</h2>
-          <h2 class="profile_info" id="user_level">Level:</h2>
-          <h2 class="profile_info" id="user_points">Points:</h2>
-          <h2 class="profile_info" id="user_title">Title:</h2>
-          <button id="profile_update_info_btn" onclick="get_personal_info()">
+          <h2 class="profile_info2" id="user_level">Level:</h2>
+          <h2 class="profile_info2" id="user_points">Points:</h2>
+          <h2 class="profile_info2" id="user_title">Title:</h2>
+          <button class="default-btn" onclick="openPersonalInfoModal()">
             Update Info
           </button>
 
-          <h1 class="profile_info" id="gear_header">Gear:</h1>
+          <h1 class="profile_info2" id="gear_header">Gear:</h1>
 
           <div id="gear_section">
             <div id="gear_left" class="gear_column">

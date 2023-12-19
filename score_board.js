@@ -13,7 +13,6 @@ window.onload = function () {
   update_current_game();
   initialize_all_time_stats();
   initialize_highscore_stats();
-  // runLogin(0);
 
   allTimeStats([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -23,175 +22,83 @@ window.onload = function () {
   run_achievements();
   initialize_levels();
   load_analytics_chart();
+
+  // obtain/display personal info
+  if (Number(localStorage.getItem("personalInfoObtained")) == 0) {
+    document.getElementById("set-personal-info-btn").textContent =
+      "Create Player";
+    document.querySelector(".close").style.color = "transparent";
+    document.querySelector(".close").style.pointerEvents = "none";
+    openPersonalInfoModal();
+  }
+  displayPersonalInfo();
 };
 
-// localStorage.clear();
-
 /**************************************************************************
- ********************************** LOGIN **********************************
+ ******************************** INFORMATION ********************************
  ***************************************************************************/
 
-/*
-function runLogin(login) {
-  let loginSection = document.getElementById("login_section");
-  let website = document.getElementById("website");
+function displayPersonalInfo() {
+  const personalInfo = JSON.parse(localStorage.getItem("personalInfo"));
+  const text = [
+    "Name:",
+    "Age:",
+    "Club:",
+    "Date of Birth:",
+    "Height:",
+    "Weight:",
+    "Email:",
+    "Phone:",
+  ];
 
-  let firstLogin = window.localStorage.getItem("firstLogin");
-  let loginFieldSection = document.getElementById("login_field_section");
+  document.querySelectorAll(".profile_info").forEach(function (item, index) {
+    item.textContent = `${text[index]} ${personalInfo[index]}`;
+  });
 
-  // if just loading the page
-  if (login == 0) {
-    website.style.display = "none";
-
-    // if first time loggin in
-    if (firstLogin == 0) {
-      document.getElementById("login_header").textContent =
-        "Create ATTrack Account";
-      document.getElementById("login_btn").textContent = "Sign Up";
-    }
-  } else {
-    // if attempting to login
-    let username2 = document.getElementById("username_entry").value;
-    let password2 = document.getElementById("pw_entry").value;
-
-    // if first time logging in
-    if (firstLogin == 0) {
-      let loginReqs = document.getElementById("login_requirements");
-
-      if (loginReqs) {
-        loginReqs.remove();
-      }
-
-      loginReqs = document.createElement("p");
-      loginReqs.id = "login_requirements";
-      loginReqs.style.margin = "-10px 0px 10px 0px";
-      loginReqs.style.color = "#c1121f";
-
-      if (username2.length < 8 || password2.length < 8) {
-        loginReqs.textContent =
-          "Username and PW must be longer than 8 characters";
-      } else if (username2.length > 20 || password2.length > 20) {
-        loginReqs.textContent =
-          "Username and PW cannot be more than 20 characters";
-      } else {
-        // update username and pw
-        window.localStorage.setItem("username", username2);
-        window.localStorage.setItem("password", password2);
-
-        // show website
-        loginSection.style.display = "none";
-        website.style.display = "block";
-
-        // update that the user has logged in before
-        window.localStorage.setItem("firstLogin", 1);
-
-        get_personal_info();
-      }
-
-      loginFieldSection.insertAdjacentElement("afterend", loginReqs);
-    } else {
-      // already created an account
-      let username = window.localStorage.getItem("username");
-      let password = window.localStorage.getItem("password");
-
-      let errorText = document.getElementById("errorText");
-
-      // Remove existing error messages if they exist
-      if (errorText) {
-        errorText.remove();
-      }
-
-      // Check if username and password match
-      if (username == username2 && password == password2) {
-        loginSection.style.display = "none";
-        website.style.display = "block";
-      } else {
-        errorText = document.createElement("p");
-        errorText.id = "errorText";
-        errorText.style.margin = "-10px 0px 10px 0px";
-        errorText.style.color = "#c1121f";
-
-        if (username != username2 && password != password2) {
-          errorText.textContent = "Incorrect Username and Password";
-        }
-        // If password doesn't match, add error msg to HTML
-        else if (password != password2) {
-          errorText.textContent = "Incorrect Password";
-        }
-        // If username doesn't match, add error msg to HTML
-        else if (username != username2) {
-          errorText.textContent = "Incorrect Username";
-        }
-
-        loginFieldSection.insertAdjacentElement("afterend", errorText);
-      }
-    }
-  }
-}
-*/
-
-function get_personal_info() {
-  // get and store personal information
-  window.localStorage.setItem(
-    "fullname",
-    prompt("Enter your fullname (e.g. John Doe).")
-  );
-  window.localStorage.setItem(
-    "dateOfBirth",
-    prompt("Enter your date of birth (e.g. 03/13/2006).")
-  );
-  window.localStorage.setItem(
-    "clubName",
-    prompt("Enter your club (e.g. Arensal FC).")
-  );
-  window.localStorage.setItem("age", prompt("Enter your age (e.g. 18)."));
-  window.localStorage.setItem(
-    "height",
-    prompt("Enter your height (e.g. 5'9).")
-  );
-  window.localStorage.setItem(
-    "weight",
-    prompt("Enter your weight (e.g. 112).")
-  );
-  window.localStorage.setItem(
-    "email",
-    prompt("Enter your email (e.g. attrack@gmail.com).")
-  );
-  window.localStorage.setItem(
-    "phoneNumber",
-    prompt("Enter your phone number (e.g. (342)233-8935).")
-  );
-
-  // update personal information
-  document.getElementById(
-    "profile_name"
-  ).textContent += `${window.localStorage.getItem("fullname")}`;
-  document.getElementById(
-    "profile_date_of_birth"
-  ).textContent += `${window.localStorage.getItem("dateOfBirth")}`;
-  document.getElementById(
-    "profile_club"
-  ).textContent += `${window.localStorage.getItem("clubName")}`;
-  document.getElementById(
-    "profile_age"
-  ).textContent += `${window.localStorage.getItem("age")}`;
-  document.getElementById(
-    "profile_height"
-  ).textContent += `${window.localStorage.getItem("height")}`;
-  document.getElementById(
-    "profile_weight"
-  ).textContent += `${window.localStorage.getItem("weight")}`;
-  document.getElementById(
-    "profile_email"
-  ).textContent += `${window.localStorage.getItem("email")}`;
-  document.getElementById(
-    "profile_phone_number"
-  ).textContent += `${window.localStorage.getItem("phoneNumber")}`;
-
-  // update team name
   document.getElementById(
     "scoreline_el1"
-  ).textContent = `${window.localStorage.getItem("clubName")} 0 - `;
+  ).textContent = `${personalInfo[2]} 0 - `;
+}
+
+function openPersonalInfoModal() {
+  // show modal and overlay
+  document.getElementsByClassName("info-modal")[0].classList.add("active");
+  document.getElementById("overlay").style.display = "block";
+}
+
+function updatePersonalInfoModal() {
+  // store updated info
+  let personalInfo = [];
+  document.querySelectorAll(".modal-input").forEach(function (item) {
+    personalInfo.push(item.value);
+  });
+  localStorage.setItem("personalInfo", JSON.stringify(personalInfo));
+
+  // if obtaining personal info for first time and an input field is blank
+  if (
+    Number(localStorage.getItem("personalInfoObtained")) == 0 &&
+    personalInfo.includes("")
+  ) {
+    document.querySelector(".modal-alert").classList.add("active");
+  } else {
+    // if first time
+    if (Number(localStorage.getItem("personalInfoObtained")) == 0) {
+      localStorage.setItem("personalInfoObtained", 1);
+      document.querySelector(".modal-alert").classList.remove("active");
+      document.querySelector(".close").style.display = "block";
+    }
+
+    // display updated info and close modal
+    displayPersonalInfo();
+    closePersonalInfoModal();
+
+    document.getElementById("set-personal-info-btn").textContent = "Update";
+  }
+}
+
+function closePersonalInfoModal() {
+  document.getElementsByClassName("info-modal")[0].classList.remove("active");
+  document.getElementById("overlay").style.display = "none";
 }
 
 /**************************************************************************
@@ -262,8 +169,6 @@ function run_achievement_tabs() {
 
 let yVals = [];
 let xVals = [];
-
-// localStorage.clear();
 
 function load_analytics_chart() {
   let maximum = 1;
@@ -948,8 +853,6 @@ function changeNumGamesPlayed(amount, manual) {
   load_analytics_chart();
 }
 
-// localStorage.clear();
-
 let pergameStats = [];
 function updatePerGameStats() {
   let gamesPlayedAT = Number(window.localStorage.getItem("gamesPlayedAT"));
@@ -1058,8 +961,6 @@ function updatePerGameStats() {
 /**************************************************************************
  ******************************** COMPARISONS ******************************
  ***************************************************************************/
-
-// localStorage.clear();
 
 function compareStats() {
   for (let i = 1; i <= 31; i++) {
@@ -1577,6 +1478,9 @@ function initialize_all_time_stats() {
 
   let notes = window.localStorage.getItem("notes");
   if (notes) document.getElementById("notes").value = notes;
+
+  const personalInfoObtained = localStorage.getItem("personalInfoObtained");
+  if (!personalInfoObtained) localStorage.setItem("personalInfoObtained", 0);
 }
 
 function updateAllTimeRecord() {
