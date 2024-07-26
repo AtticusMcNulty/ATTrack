@@ -11,3 +11,6 @@ Gives users the ability to analyze and reflect upon their performances using cha
 
 ### Rewards and Customization
 Has an achievements and points system to build and stylize your own player.
+
+## Hosted on GitHub Pages
+https://atticusmcnulty.github.io/ATTrack/
