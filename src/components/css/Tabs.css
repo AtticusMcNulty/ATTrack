@@ -1,0 +1,35 @@
+.tabs {
+  font-family: "Poppins";
+  background: rgb(29, 29, 29);
+  font-size: 14px;
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+
+  padding: 2.5px 10px;
+  margin: 0px;
+
+  cursor: pointer;
+}
+
+.tab {
+  padding: 25px 0px;
+}
+
+.tab.active {
+  color: #52b788;
+}
+
+.tab:hover {
+  color: #52b788;
+}
+
+.profile-picture {
+  width: 70px;
+
+  margin: 0px;
+  cursor: pointer;
+}

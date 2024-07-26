@@ -1,0 +1,73 @@
+.history-section {
+  min-height: 673px;
+}
+
+.history-games {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-game {
+  background: #2c2c2c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  border-radius: 10px;
+  margin: 0px 10px;
+
+  overflow: hidden;
+}
+
+.history-game-header {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: #3c3c3c;
+  color: #fff;
+  font-weight: 600;
+  font-size: 17px;
+
+  padding: 15px 20px;
+
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/*
+.history-game-header:hover {
+  background-color: #474747;
+}
+*/
+
+.history-game-header-left {
+  display: flex;
+  gap: 20px;
+}
+
+.history-game-header-right {
+  display: flex;
+  align-items: center;
+}
+
+.history-game-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  background: #444;
+  color: #ccc;
+
+  padding: 15px 20px;
+}
+
+.history-game-stat {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 14px;
+  text-transform: capitalize;
+
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}

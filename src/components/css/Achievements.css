@@ -1,0 +1,159 @@
+.achievements-content {
+  background: #2a2a2a;
+  padding: 10px 20px 20px 20px;
+  border-radius: 7px;
+}
+
+.achievement-tabs {
+  display: flex;
+  justify-content: space-around;
+
+  background: #3a3a3a;
+
+  border-radius: 5px;
+  padding: 10px 0px;
+  margin-top: 10px;
+}
+
+.achievement-tab {
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.achievement-tab:hover {
+  color: #52b788;
+  box-shadow: 0px 2px 0px 0px #52b788;
+}
+
+.achievement-tab.active {
+  color: #52b788;
+}
+
+/*
+.achievements {
+  display: flex;
+  flex-direction: column;
+
+  background: #3a3a3a;
+
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 10px;
+}
+*/
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 7px;
+  padding: 10px 15px 10px 10px;
+  margin: 12.5px 10px 10px 10px;
+}
+
+.achievement.completed {
+  background-color: rgb(218, 165, 32) !important;
+}
+
+.achievement-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achievement-header {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.achievement-description {
+  font-size: 12px;
+  margin: 10px 0px;
+}
+
+.achievement-points {
+  color: #e0bb36;
+  margin: 0px 0px 5px 0px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: end;
+}
+
+.achievement-points.completed {
+  color: white;
+}
+
+.achievement-progressbar-outer {
+  background-color: white;
+
+  border-radius: 13px;
+  padding: 3px;
+  margin: 6px 0px 5px 10px;
+
+  width: 325px;
+}
+
+.achievement-progressbar-inner {
+  background: #52b788;
+  font-size: 8px;
+
+  border-radius: 10px;
+  padding: 0px 3px 2px 1.5px;
+  height: 10px;
+}
+
+.achievement-store {
+  background: #eee;
+  color: #1a1a1a;
+
+  border-radius: 5px;
+  padding: 10px 15px 10px 10px;
+  margin: 12.5px 10px 10px 10px;
+}
+
+.achievement-store-header {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.achievement-store-body {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.achievement-store-cost {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.achievement-store-btn {
+  font-family: "Poppins";
+  font-weight: 500;
+  background: #52b788;
+
+  border: 0px;
+  border-radius: 5px;
+  padding: 2px 8px 2px 8px;
+
+  cursor: pointer;
+}
+
+.achievement-store.redeemed {
+  color: white;
+  background: rgb(228, 174, 35);
+}
+
+.achievement-store-btn.redeemed {
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+
+  padding: 0px;
+
+  background: rgb(228, 174, 35);
+
+  cursor: auto;
+}

@@ -1,0 +1,126 @@
+.feedback-section {
+  min-height: 88vh;
+  padding: 20px;
+  /* background: linear-gradient(145deg, #1e1e1e, #2c2c2c); */
+  background: #1f1f1f;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  color: #ffffff;
+}
+
+.section-header {
+  font-family: "Poppins";
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+  margin: 10px 0px 8px 0px;
+}
+
+.horizontal-line {
+  border: 0.1px solid white;
+}
+
+.feedback {
+  padding: 5px 20px 20px 20px;
+  background: #2c2c2c;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.feedback-item {
+  display: flex;
+  align-items: center;
+
+  background: #3a3a3a;
+
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 0;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.feedback-item:hover {
+  transform: translateY(-2.5px);
+}
+
+.feedback-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  color: #f39c12;
+}
+
+.feedback-content {
+  flex-grow: 1;
+}
+
+.feedback-header {
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.feedback-text {
+  font-size: 16px;
+  color: #b0b0b0;
+}
+
+.feedback-summary-advice {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b0b0b0;
+  background: #2a2a2a;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+}
+
+.feedback-error {
+  text-align: center;
+  color: #e42c38;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.notes-content {
+  display: flex;
+  align-items: center;
+  margin: 0px 15px 0px 5px;
+}
+
+.notes-header {
+  flex: 0.3;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.notes-textarea {
+  flex: 0.75;
+  font-family: "Poppins";
+  background-color: #1d1d1d;
+  color: white;
+
+  border: 0.5px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 10px auto 0px auto;
+
+  height: 225px;
+
+  outline: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
