@@ -1,6 +1,6 @@
 # ATTrack
-## Main Description
-ATTrack is an application that allows soccer players of different skill levels to manually track their real time stats.
+## Description
+ATTrack is an application that allows soccer players of different skill levels to manually track their real time stats. I developed it as a way for my Dad to track various statistics about my sister's soccer games while she played.
 
 ## Features
 ### Statistical Tracking
